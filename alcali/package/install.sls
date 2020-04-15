@@ -64,6 +64,7 @@ alcali-package-install-virtualenv-managed:
     - python: {{ alcali.deploy.runtime }}
     {% endif %}
     - system_site_packages: False
+    - requirements: {{ alcali.deploy.directory }}/code/requirements/prod.txt
     - require:
       - git: alcali-package-install-git-latest
 
